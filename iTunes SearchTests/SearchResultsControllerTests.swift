@@ -90,4 +90,19 @@ class SearchResultsControllerTests: XCTestCase {
         
     }
     
+    func testNoData() {
+        let markDataLoader = MockDataLoader(data: noResultData, response: nil, error: nil)
+        let controller = SearchResultController(dataLoader: markDataLoader)
+        let expectation = self.expectation(description: "Wait for results")
+        
+        controller.performSearch(for: "GarageBand", resultType: .software) {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)
+        
+        XCTAssertEqual(controller.searchResults.count, 0, "Expected 0 results for \"GarageBand\"")
+        // XCTAssertNil(controller.error)
+    }
+    
 }
