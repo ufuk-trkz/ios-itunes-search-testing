@@ -18,6 +18,8 @@ class SearchResultController {
     
     func performSearch(for searchTerm: String, resultType: ResultType, completion: @escaping () -> Void) {
         
+        
+        
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         let parameters = ["term": searchTerm,
                           "entity": resultType.rawValue]

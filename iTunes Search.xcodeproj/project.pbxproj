@@ -19,6 +19,7 @@
 		E135D5CC2429186800D2D9A1 /* SearchResultsControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D5CB2429186800D2D9A1 /* SearchResultsControllerTests.swift */; };
 		E135D5D52429213500D2D9A1 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D5D42429213500D2D9A1 /* NetworkDataLoader.swift */; };
 		E135D5D72429221D00D2D9A1 /* URLSession+NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D5D62429221D00D2D9A1 /* URLSession+NetworkDataLoader.swift */; };
+		E135D5D92429264F00D2D9A1 /* MockDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D5D82429264F00D2D9A1 /* MockDataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E135D5CD2429186800D2D9A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E135D5D42429213500D2D9A1 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
 		E135D5D62429221D00D2D9A1 /* URLSession+NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkDataLoader.swift"; sourceTree = "<group>"; };
+		E135D5D82429264F00D2D9A1 /* MockDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				E135D5CB2429186800D2D9A1 /* SearchResultsControllerTests.swift */,
+				E135D5D82429264F00D2D9A1 /* MockDataLoader.swift */,
 				E135D5CD2429186800D2D9A1 /* Info.plist */,
 			);
 			path = "iTunes SearchTests";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E135D5D92429264F00D2D9A1 /* MockDataLoader.swift in Sources */,
 				E135D5CC2429186800D2D9A1 /* SearchResultsControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
