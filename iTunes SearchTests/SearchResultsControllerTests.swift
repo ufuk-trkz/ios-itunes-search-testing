@@ -19,22 +19,40 @@ import XCTest
  Is the completion handler called when data is good?
  Is the completion handler called when data is bad?
  Is the completion handler called when networking fails?
-
+ 
  */
 
 class SearchResultsControllerTests: XCTestCase {
-
+    
     func testForSomeResults() {
         let controller = SearchResultController()
-        
         let expectation = self.expectation(description: "Wait for results")
         
         controller.performSearch(for: "GarageBand", resultType: .software) {
-//            XCTFail()
+            //            XCTFail()
             expectation.fulfill()
         }
-        
         wait(for: [expectation], timeout: 5)
     }
     
+    //    func testSpeedOfTypicalRequest() {
+    //        measure {
+    //            testForSomeResults()
+    //        }
+    
+    func testSpeedOfTypicalRequestMoreAccurately() {
+        measureMetrics([.wallClockTime], automaticallyStartMeasuring: false) {
+            let controller = SearchResultController()
+            let expectation = self.expectation(description: "Wait for results")
+            
+            self.startMeasuring()
+            
+            controller.performSearch(for: "GarageBand", resultType: .software) {
+                self.stopMeasuring()
+                
+                expectation.fulfill()
+            }
+            wait(for: [expectation], timeout: 5)
+        }
+    }
 }
