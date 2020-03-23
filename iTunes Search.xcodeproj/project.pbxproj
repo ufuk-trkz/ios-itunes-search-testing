@@ -20,6 +20,7 @@
 		E135D5D52429213500D2D9A1 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D5D42429213500D2D9A1 /* NetworkDataLoader.swift */; };
 		E135D5D72429221D00D2D9A1 /* URLSession+NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D5D62429221D00D2D9A1 /* URLSession+NetworkDataLoader.swift */; };
 		E135D5D92429264F00D2D9A1 /* MockDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D5D82429264F00D2D9A1 /* MockDataLoader.swift */; };
+		E135D5DB242927E300D2D9A1 /* mockJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E135D5DA242927E300D2D9A1 /* mockJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		E135D5D42429213500D2D9A1 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
 		E135D5D62429221D00D2D9A1 /* URLSession+NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkDataLoader.swift"; sourceTree = "<group>"; };
 		E135D5D82429264F00D2D9A1 /* MockDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataLoader.swift; sourceTree = "<group>"; };
+		E135D5DA242927E300D2D9A1 /* mockJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mockJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				E135D5CB2429186800D2D9A1 /* SearchResultsControllerTests.swift */,
 				E135D5D82429264F00D2D9A1 /* MockDataLoader.swift */,
+				E135D5DA242927E300D2D9A1 /* mockJSON.swift */,
 				E135D5CD2429186800D2D9A1 /* Info.plist */,
 			);
 			path = "iTunes SearchTests";
@@ -285,6 +288,7 @@
 			files = (
 				E135D5D92429264F00D2D9A1 /* MockDataLoader.swift in Sources */,
 				E135D5CC2429186800D2D9A1 /* SearchResultsControllerTests.swift in Sources */,
+				E135D5DB242927E300D2D9A1 /* mockJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -55,4 +55,39 @@ class SearchResultsControllerTests: XCTestCase {
             wait(for: [expectation], timeout: 5)
         }
     }
+    
+    func testValidData() {
+        let markDataLoader = MockDataLoader(data: goodResultData, response: nil, error: nil)
+        let controller = SearchResultController(dataLoader: markDataLoader)
+        let expectation = self.expectation(description: "Wait for results")
+        
+        controller.performSearch(for: "GarageBand", resultType: .software) {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)
+        
+        XCTAssertEqual(controller.searchResults.count, 2, "Expected 2 results for \"GarageBand\"")
+        
+        let firstResult = controller.searchResults[0]
+        
+        XCTAssertEqual(firstResult.title, "GarageBand")
+        XCTAssertEqual(firstResult.artist, "Apple")
+    }
+    
+    func testInvalidData() {
+        let markDataLoader = MockDataLoader(data: badResultData, response: nil, error: nil)
+        let controller = SearchResultController(dataLoader: markDataLoader)
+        let expectation = self.expectation(description: "Wait for results")
+        
+        controller.performSearch(for: "GarageBand", resultType: .software) {
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)
+        
+        XCTAssertEqual(controller.searchResults.count, 0, "Expected 0 results for \"GarageBand\"")
+        
+    }
+    
 }
